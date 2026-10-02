@@ -268,7 +268,7 @@ function drawLabel(item, target=cx){
   lines.forEach((l,i)=> ctx.fillText(l, W/2, nameTop + lh*(i+1) - size*0.18));
   // Precio: lo más grande posible en el espacio restante
   const code1 = item[0].split("|")[0];
-  const codeSize = 15, codeBase = H - 3;
+  const codeSize = 17, codeBase = H - 3;
   ctx.font = "700 "+codeSize+"px "+FONT;
   ctx.fillText(code1, W/2, codeBase);
   const priceTop = nameTop + nameH + 1, priceBox = H - priceTop - codeSize - 5;
@@ -534,7 +534,7 @@ $("#invFile").onchange = async (e)=>{
   e.target.value="";
 };
 
-/* Inicio hola*/
+/* Inicio */
 (async ()=>{
   try{ await Promise.all([document.fonts.load('700 30px "Barlow Condensed"'), document.fonts.load('800 60px "Barlow Condensed"')]); }catch(e){}
   showItem(null);
